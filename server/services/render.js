@@ -4,7 +4,7 @@ var Userdb = require('../model/model')
 
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/users
-    axios.get('http://localhost:8080/api/users')
+    axios.get('https://www.makkar.ml/api/users')
         .then(function(response){
             res.render('index', { users : response.data });
         })
@@ -18,7 +18,7 @@ exports.adminRoutesPost = (req, res) => {
     var {uname,pass} =req.body
     if(uname==='ADMIN' && pass==='admin'){
         // Make a get request to /api/users
-        axios.get('http://localhost:8080/api/users')
+        axios.get('https://www.makkar.ml/api/users')
         .then(function(response){
             res.render('index_admin', { users : response.data }); 
         })
@@ -40,7 +40,7 @@ exports.add_user = (req, res) =>{
 }
 
 exports.update_user = (req, res) =>{
-    axios.get('http://localhost:8080/api/users', { params : { id : req.query.id }})
+    axios.get('https://www.makkar.ml/api/users', { params : { id : req.query.id }})
         .then(function(userdata){
             res.render("update_user", { user : userdata.data})
         })
