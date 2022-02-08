@@ -1,0 +1,25 @@
+<% for(var i=0; i < users.length; i++) { %>
+    <style>
+        :root {
+            --url: url(<%= users[i].imagePC %>);
+            --id: <%=i+1 %>;
+            --sec: <%=i*5 %>
+        }
+ 
+        .untitled__slide:nth-child(<%=i+1 %>) {
+            animation-delay: <%=i*5 %>s;
+        }
+
+        .untitled__slide:nth-child(<%=i+1 %>) .untitled__slideBg {
+            background-image: url(<%= users[i].imagePC %>)
+        }
+
+      @media screen and (max-width:450px) {
+
+        .untitled__slide:nth-child(<%=i+1 %>) .untitled__slideBg {
+            background-image: url(<%= users[i].imagePN%>)
+        }
+      }
+
+    </style>
+    <% } %>

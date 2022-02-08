@@ -1,0 +1,24 @@
+
+<% for(var i=0; i < users.length; i++) { %>
+    <div class="col-md-4 col-sm-6 pt-5" style="display: flex;">
+    <div class="card" style="width: 18rem; border: solid 2px rgb(138, 134, 134) ; justify-content: end; align-items: flex-start; ">
+        <img src="<%= users[i].imagePC %>" class="card-img-top" alt="Image Not Found">
+        <img src="<%= users[i].imagePN %>" class="card-img-top mt-3 mb-2" alt="Image Not Found">
+        <div class="card-body">
+            <h5 class="card-title">
+                <%= i + 1 %>
+            </h5>
+            <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%=users[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+            <a href="/posts?id=<%= users[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient">Read more</span>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <% } %>
