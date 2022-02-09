@@ -2,4 +2,4 @@
 
 ## A FATAH CARNIVAL
 
-<img src="">
+<img src="https://github.com/fatahfreinds/CRUD/blob/heroku/assets/images/pre.jpg">
