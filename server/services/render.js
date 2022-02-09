@@ -16,7 +16,7 @@ exports.homeRoutes = (req, res) => {
 exports.adminRoutesPost = (req, res) => {
     //Admin login
     var {uname,pass} =req.body
-    if(uname==='ADMIN' && pass==='admin'){
+    if(uname==='MAKKARU' && pass==='fatah@makkaru'){
         // Make a get request to /api/users
         axios.get('http://makkaru.herokuapp.com/api/users')
         .then(function(response){
