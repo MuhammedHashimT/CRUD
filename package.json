@@ -4,8 +4,9 @@
   "description": "crud application with express and mongodb",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src"
+    
   },
   "keywords": [
     "MAKKAR",
@@ -25,12 +26,8 @@
     "mongoose-type-url": "^2.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6"
-  }
-"devDependencies": {},
-  "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
+"devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fatahfreinds/CRUD.git"
