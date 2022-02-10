@@ -1,3 +1,5 @@
+import * as express from "express";
+
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
