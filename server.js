@@ -8,7 +8,7 @@ const path = require('path');
 const connectDB = require('./server/database/connection');
 
 const app = express();
-// const router= express.router();
+const router= express.router();
 
 dotenv.config( { path : 'config.env'} )
 const PORT = process.env.PORT || 3471
